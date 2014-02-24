@@ -17,21 +17,20 @@
 		<button data-ng-click="addCustomer()">Add Customer</button>
 		<br />-->
 		<a href="#/view2">View 2</a>
-			<br />
-			<br />
+			
 		
-        <div ng-controller='MyCtrl'>
-    		<button ng-click='toggleModal()'>Open Modal Dialog</button>
+    <div ng-controller='MyCtrl'>
+    	<button ng-click='toggleModal()'>Add Customer</button>
     		<modal-dialog show='modalShown' width='400px' height='60%'>
-     		 	<div ng-controller='SimpleController'>
+     		 	<span ng-controller='SimpleController'>
      		 		<p>Customer Name:<br />
 					<input type="text" data-ng-model="newCustomer.name" />
 					<br />
 					Customer City:<br />
 					<input type="text" data-ng-model="newCustomer.city" />
 					<br />
-				</div>
-		<button data-ng-click="addCustomer()">Add Customer</button><p>
-    		</modal-dialog>
-        </div>
+				</span>
+			<button data-ng-click="addCustomer()">Add Customer</button><p>
+    	</modal-dialog>
+    </div>
 </div>

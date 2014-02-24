@@ -55,7 +55,7 @@ var demoApp = angular.module('demoApp', ['ngRoute']);
         };
         
     });
-
+//createDialog.js? cant separate this to its own file.
     demoApp.controller('MyCtrl', function($scope) {
             $scope.modalShown = false;
             $scope.toggleModal = function() {
@@ -63,7 +63,7 @@ var demoApp = angular.module('demoApp', ['ngRoute']);
             };
     });
 
-    demoApp.directive('modalDialog', function() {
+demoApp.directive('modalDialog', function() {
   return {
     restrict: 'E',
     scope: {
@@ -85,4 +85,8 @@ var demoApp = angular.module('demoApp', ['ngRoute']);
  // See below
   };
 });
+angular.module('bar', [])
+    .controller('SimpleController', function Ctrl1($scope) {
+      $scope.bar = 'DualBarChart/bar.html';
+    });
     
