@@ -1,7 +1,7 @@
 <div class="container">
 	<h2>View 2</h2>
 	City:
-	
+	 <script src="DualBarChart/d3.js"></script> 
 	<br />
 	<input type="text" data-ng-model="city" />
 	<br />
@@ -14,8 +14,10 @@
 		<div ng-controller='MyCtrl'>
     	<button ng-click='toggleModal()'>View Bar Chart</button>
     		<modal-dialog show='modalShown' width='400px' height='60%'>
-     		 	<span ng-controller='SimpleController'>
-     		 		<gh-visualization val="ghVisulaization">{{ghVisulaization()}}</gh-visualization>
+     		 	
+     		 		I am working on getting a d3 chart here. 
+     		 		<!-- How do I inject a chart or graph -->
+     		 	<window data-ng-model="graph"><window/>
 				</span>
 			
     	</modal-dialog>

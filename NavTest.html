@@ -1,0 +1,110 @@
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand"><img style="height: 40; margin-top:-20;"src="images/logo.png" /></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link</a></li>
+        <li   ng-click="isCollapsed = !isCollapsed"><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Modules <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contexts <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="test" collapse="!isCollapsed">
+	  <div>
+	  <ul class="nav"style='float:left;'>User Settings
+	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a>Profile</a></li>
+	    <li ><span  class="glyphicon glyphicon-home pull-left"></span><a>My Dashboard</a></li>
+	    <li><span  class="glyphicon glyphicon-refresh pull-left"></span><a>Customize</a></li>
+	    <li><span  class="glyphicon glyphicon-cog pull-left"></span><a>Settings</a></li>
+	    <li><span  class="glyphicon glyphicon-eject pull-left"></span><a>Logout</a></li>
+	  </ul>
+
+	   <ul class="nav" style='float:left;'>Contexts
+	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a>Validate</a></li>
+	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a>Status</a></li>
+	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a>Configure</a></li>
+	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a>View Reports</a></li>
+	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a>Build Report</a></li>
+	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a>View a Patient</a></li>
+	   </ul>
+
+	    <ul class="nav" style='float:left;'>Contexts Continued
+	   	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a>Messaging</a></li>
+	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a>Patient Portal</a></li>
+	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a>Audit</a></li>
+	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a>Cohort identification</a></li>
+	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a>MPI Management</a></li>
+	    </ul>
+	   
+
+	     <ul class="nav" style='float:left;'>Products
+	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a href="#data-warehouse">Data Warehouse</a></li>
+	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a>CPC</a></li>
+	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a>Clinical Reports</a></li>
+	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a href="#about">Claims</a></li>
+	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a>MPI</a></li>
+</ul>
+	    <ul class="nav" style='float:left;'>Products Continued
+	    	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a href="#about">Fraud Detection</a></li>
+	    	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a>De-id</a></li>
+	    <li><span  class="glyphicon glyphicon-star pull-left"></span><a href="#about">Patient Portal</a></li>
+	   </ul>
+	    <div style="clear:both"></div>
+	  </div>
+	</div>

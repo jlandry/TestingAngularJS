@@ -1,5 +1,28 @@
-demoApp.directive('ghVisulaization', function () {
+angular.module('d3', [])
+.factory('d3Service', ['$document', '$window', '$q', '$rootScope',
+  function($document, $window, $q, $rootScope) {
+    var d = $q.defer(),
+        d3service = {
+          d3: function() { return d.promise; }
+        };
+         function onScriptLoad() {
+    // Load client in the browser
+    $rootScope.$apply(function() { d.resolve($window.d3); });
+  }
+  var scriptTag = $document[0].createElement('script');
+  scriptTag.async = true;
+  scriptTag.src = 'http://d3js.org/d3.v3.min.js';
+  scriptTag.onreadystatechange = function () {
+    if (this.readyState == 'complete') onScriptLoad();
+  }
+  scriptTag.onload = onScriptLoad;
+ 
+  var s = $document[0].getElementsByTagName('body')[0];
+  s.appendChild(scriptTag);
+  return d3service;
+}]);
 
+        //original
 
 var margin = {top: 80, right: 80, bottom: 80, left: 80},
     width = 600 - margin.left - margin.right,
@@ -27,7 +50,7 @@ var svg = d3.select("body").append("svg")
     .attr("class", "graph")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("data.tsv", type, function(error, data) {
+d3.tsv("data.tsv", function(error, data) {
   x.domain(data.map(function(d) { return d.year; }));
   y0.domain([0, d3.max(data, function(d) { return d.money; })]);
   
@@ -74,10 +97,4 @@ d3.tsv("data.tsv", type, function(error, data) {
       .attr("y", function(d) { return y1(d.number); })
 	  .attr("height", function(d,i,j) { return height - y1(d.number); }); 
 
-});
-
-function type(d) {
-  d.money = +d.money;
-  return d;
-}
 });
