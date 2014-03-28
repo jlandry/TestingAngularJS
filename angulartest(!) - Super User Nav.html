@@ -37,27 +37,29 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a class="navbar-active" href="#/view1" id="logo"><img src="logo.png" ></a></li>
-        
-
-        <li ng-click="isCollapsed = !isCollapsed" >
-        <a href="#" class='active'>My Dashboard</a></li>      
-
-
-
+        <li class="active"><a href="#">Home</a></li>
+        <li   ng-click="isCollapsed = !isCollapsed"><a href="#">NavMenu</a></li>
+      
         <li class="dropdown">
-          <a href="#/view2" class="navbar-active" class="nav"><span class="badge pull-left"></span> </a>
+          <li class="dropdown">
+          <a href="#" class="nav">My Dashboard</a>
+        </li>
         </li>
       </ul>
-      
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-         <a href="#" class="navbar-active" class="dropdown-toggle" data-toggle="dropdown">User (Super User) <span class="badge pull-left">2</span><b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">User (Data Specialist) <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <ul class="nav">
               <li><a>Profile</a></li>
-              <li><a>Customize<span class="badge pull-left">2</span></a></li>
-              <li><a>Settings</a></li>
+              <li><span></span><a>Customize</a></li>
+              <li><span></span><a>Settings</a></li>
             </ul>
           </ul>
         </li>
@@ -101,7 +103,7 @@
     </ul>
 
      <ul class="nav" style='float:right;'>
-      <li><a>Messaging<br/> <span class="badge pull-left"></span> </a></li>
+      <li><a>Messaging</a></li>
       <li><a>Documentation</a></li>
      </ul>
   
@@ -118,17 +120,6 @@
              
      
             
-<script>
-
-$(function() {
-   $("navbar-active").click(function() {
-      // remove classes from all
-      $("navbar-active").removeClass("active");
-      // add class to the one we clicked
-      $(this).addClass("active");
-   });
-});
-</script>
 
     </body>
 </html>

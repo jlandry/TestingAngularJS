@@ -41,3 +41,42 @@
   font-weight: bold;
   font-family: 'arial', 'sans-serif';
 }
+.NavDropDown{
+  font-size: 100%;
+}
+/*nav menu customizations*/
+.nav>li>a {
+position: relative;
+display: block;
+padding: 3px 15px;
+}
+.navbar-nav>li>a {
+  padding: 15px 15px;
+}
+#logo {
+padding: 4px 5px;
+}
+
+.dropdown-menu .divider {
+margin: 1px 0;
+}
+.navbar {
+margin-bottom: 1px;
+}
+.well-lg {
+padding: 18px;
+border-radius: 6px;
+}
+.well {
+margin-bottom: 0px;
+}
+
+.badge {
+background-color: #666999;
+}
+/* Put your css in here */
+
+.chart {
+ width: 300px;
+ height: 500px;
+}

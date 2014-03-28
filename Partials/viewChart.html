@@ -11,10 +11,22 @@ div class="container">
       <button ng-click='toggleModal()'>View Bar Chart</button>
         <modal-dialog show='modalShown' width='400px' height='60%'>
           
-            I am working on getting a d3 chart here. 
-            <!-- How do I inject a chart or graph -->
+           <div ng-controller="MainCtrl">
+    <p>Hello {{name}}!</p>
+    <div data-ac-chart="'bar'" data-ac-data="data" data-ac-config="config" class="chart"></div>
+    <br>
+    Click Data:{{datax}}
+   
+    
+    <br>
+    Mouse Data:{{mouseData}}
+    <br>
+     
+     
+     <br>
+     msg:{{msg}}
            
-           
+        </div>
         </span>
       
       </modal-dialog>

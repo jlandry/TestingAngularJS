@@ -78,7 +78,70 @@ var demoApp = angular.module('demoApp', ['ngRoute', 'ui.bootstrap']);
             $scope.modalShown = !$scope.modalShown;
             };
     });
+    demoApp.controller('MainCtrl', function($scope) {
+            $scope.name = 'World';
+            $scope.clickData = "tbd";
+            $scope.mouseData = "tbd";
+            $scope.msg = "help";
+            
+            $scope.config = {
+            title : 'Plunker Charts',
+            tooltips: true,
+            labels : false,
+            mouseover: function(d) {
+              $scope.msg = arguments.length;
+               $scope.mouseData = JSON.stringify(d);
+            },
+            mouseout: function(d) {
+              $scope.msg = arguments.length;
+                $scope.mouseData = "";
+                $scope.clickData = "";
+               
+            },
+            click: function(d ) {
+                $scope.msg = arguments.length;
+                $scope.datax = JSON.stringify(d);
+           
+            },
+            legend: {
+              display: true,
+              //could be 'left, right'
+              position: 'left'
+            }
+          };
 
+          $scope.data = {
+            "series": [
+              "Sales"
+            ],
+            "data": [
+              {
+                "x": "aaa",
+                "y": [
+                  54 
+                ],
+                "tooltip": "This is a tooltip"
+              },
+              
+                  {
+                "x": "bbb",
+                "y": [
+                   100 
+                ],
+                "tooltip": "This is a tooltip"
+              },
+                  {
+                "x": "ccc",
+                "y": [
+                   112 
+                ],
+                "tooltip": "This is a tooltip"
+              }
+              
+              
+            ]
+          };
+          });
 //testing D3 Directive
 demoApp.directive('modalDialog', function() {
   return {
@@ -105,23 +168,13 @@ demoApp.directive('modalDialog', function() {
 
   demoApp.controller('CollapseDemoCtrl', function($scope) {
   $scope.isCollapsed = false;
+  $scope.active = true;
 });
 //Cannot get the d3 to show up.
 //attemted to get a basic directive to show up and cannot. 
-/*angular.module('d3AngularApp', ['d3'])
-.directive('d3Bars', ['$window', '$timeout', 'd3Service', 
-  function($window, $timeout, d3Service) {
-    return {
-      restrict: 'A',
-      scope: {
-        data: '=',
-        label: '@',
-        onClick: '&'
-      },
-      link: function(scope, ele, attrs) {
-        d3Service.d3().then(function(d3) {
- 
-          var renderTimeout;
+/*.on("click", function(d) {
+config.click(d, d3.event);
+scope.$apply( var renderTimeout;
           var margin = parseInt(attrs.margin) || 20,
               barHeight = parseInt(attrs.barHeight) || 20,
               barPadding = parseInt(attrs.barPadding) || 5;
@@ -195,7 +248,24 @@ demoApp.directive('modalDialog', function() {
                   .text(function(d) {
                     return d.name + " (scored: " + d.score + ")";
                   });
-            }, 200);
+            }, 200););
+});
+angular.module('d3AngularApp', ['d3'])
+.directive('d3Bars', ['$window', '$timeout', 'd3Service', 
+  function($window, $timeout, d3Service) {
+    return {
+      restrict: 'A',
+      scope: {
+        data: '=',
+        label: '@',
+        onClick: '&'
+      },
+
+
+      link: function(scope, ele, attrs) {
+        d3Service.d3().then(function(d3) {
+ 
+         
           };
         });
       }}
