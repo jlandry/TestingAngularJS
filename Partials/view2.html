@@ -1,5 +1,14 @@
-<div class="container">
-	<h2>View 2</h2>
+
+ <div ng-controller="gridster">
+ <gridster options="options">
+    <gridster-item ng-repeat="item in items">
+    	{{ item }}
+    </gridster-item>
+
+ </gridster>
+</div>
+
+	<!--/*<h2>View 2</h2>
 	City:
 	 <script src="DualBarChart/d3.js"></script> 
 	<br />
@@ -17,9 +26,8 @@
      		 	
      		 		I am working on getting a d3 chart here. 
      		 		<!-- How do I inject a chart or graph -->
-     		 	<window data-ng-model="graph"><window/>
+     		 	<!--	<window data-ng-model="graph"><window/>
 				</span>
 			
     	</modal-dialog>
-    </div>
-</div>
+    </div> -->

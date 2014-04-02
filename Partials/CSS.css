@@ -80,3 +80,141 @@ background-color: #666999;
  width: 300px;
  height: 500px;
 }
+/* Styles for Grister Test*/
+#def_button {
+background : #84FF49
+font-size: 25px;
+opacity: 1;
+width: 200px;
+height: 40px
+}
+
+#li1 {
+background-color: grey;    
+}
+#li2 {
+background-color: grey;     
+}
+#li3 {
+background-color: grey;     
+}
+#li4 {
+background-color: grey;      
+}
+#li5 {
+background-color: grey;     
+}
+#li6 {
+background-color: grey;  
+}
+#li7 {
+background-color: grey;      
+}
+#li8 {
+background-color: grey;      
+}
+#li9 {
+background-color: grey;      
+}
+#li10 {
+background-color: grey;     
+}
+#li11 {
+background-color: grey;     
+}
+#li12 {
+background-color: grey;    
+}
+#li13 {
+background-color: grey;     
+}
+#li14 {
+background-color: grey;  
+}
+#li15 {
+background-color: grey;      
+}
+#li16 {
+background-color: grey;    
+}
+#li17 {
+background-color: grey;      
+}
+#li18 {
+background-color: grey;  
+}
+#li19 {
+background-color: grey;   
+}
+#li20 {
+background-color: grey;     
+}
+#li21 {
+background-color: grey;      
+}
+
+
+
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: x-small;
+   }
+
+ul, ol {
+    list-style: none;
+}
+
+h1 {
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400; 
+}
+
+h3 {
+  font-size: 25px;
+  font-weight: 600;
+  color: white; 
+}
+
+/* Gridster styles */
+
+.demo {
+    margin: 3em 0;
+    padding: 7.5em 0 5.5em;
+}
+
+.gridster {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.gridster .gs-w {
+    background: #FFF;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.gridster .player {
+    -webkit-box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+
+
+.gridster .gs-w.try {
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+    background-position: 37px -169px;
+
+}
+
+.gridster .preview-holder {
+    border: none!important;
+    border-radius: 0!important;
+    background: rgba(255,255,255,.2)!important;
+}
+
+

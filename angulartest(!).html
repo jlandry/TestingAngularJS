@@ -3,7 +3,7 @@
   <head>
     <title>Super User Nav</title>
           <link rel="stylesheet" href="Required/bootstrap.min.css" />
-           
+          <link rel="stylesheet" href='Required/jquery.gridster.min.css' />
           <link rel="stylesheet" href="Partials/css.css" />
 
         <script src="Required/angular.js"></script>
@@ -13,9 +13,12 @@
         <script src='Required/bootstrap.min.js'></script>
         <script src='Required/ui-bootstrap.min.js'></script>
 
+        <script type="text/javascript" src="Required/gridster.js"></script>
+        <script type="text/javascript" src="Required/ngGridster.js" charset="utf-8"></script>
                
         <script src="http://d3js.org/d3.v3.min.js"></script>
         <script src="app.js"></script>
+        
 
   </head>
 <body ng-controller="SimpleController">
@@ -41,7 +44,7 @@
         
 
         <li ng-click="isCollapsed = !isCollapsed" >
-        <a href="#" class='active'>My Dashboard</a></li>      
+        <a  class='active'>My Dashboard</a></li>      
 
 
 

@@ -18,7 +18,7 @@
 		<br />-->
 		<a href="#/view2">View 2</a>
 		<a href="#/viewChart">View Chart</a>
-			
+
 		
     <div ng-controller='MyCtrl'>
     	<button ng-click='toggleModal()'>Add Customer</button>
@@ -34,4 +34,13 @@
 			<button data-ng-click="addCustomer()">Add Customer</button><p>
     	</modal-dialog>
     </div>
+</div>
+
+ <div ng-controller="gridster">
+ <gridster options="options">
+    <gridster-item ng-repeat="item in items">
+    	{{ item }}
+    </gridster-item>
+
+ </gridster>
 </div>
